@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+html{
+    font-size: 62.5%;
+}
+.center{
+    width: 100vw;
+    height: 100vh;
+    background: hsl(234,55%,80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+h1{
+    font-size: 15rem;
+    position: absolute;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+h1:first-child{
+    color: white;
+}
+h1:last-child{
+    color: crimson;
+    clip-path: polygon(100% 0,0 100%,100% 100%);
+    background: hsl(234,55%,80%);
+}
+h1:last-child:hover{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+}
+h1:first-child:hover ~ h1{
+    clip-path: polygon(0 0,100% 0,100% 0,0 0);
+}
